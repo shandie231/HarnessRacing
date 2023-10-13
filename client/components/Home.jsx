@@ -20,6 +20,7 @@ const Home = () => {
     }catch(err){
       console.log('stuck in catch on getHorse request. Error: ', err);
     }
+    //sd
   }
 
   return(
