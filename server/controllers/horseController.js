@@ -19,6 +19,7 @@ try{
   console.log('response:', response)
   res.locals.horse = 'horse';
   console.log(res.locals.horse);
+  //sdfs
   return next();
 }catch(err){
   return next({
