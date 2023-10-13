@@ -20,6 +20,7 @@ try{
   res.locals.horse = 'horse';
   console.log(res.locals.horse);
   //sdfs
+  //sdfsd
   return next();
 }catch(err){
   return next({
