@@ -2,36 +2,18 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
-  entry: './client/index.js',
+  
+  entry: [
+    // Entry point of app
+    './client/index.js'
+  ],
   output: {
     path: path.resolve(__dirname, 'build'),
+    publicPath: '/',
     filename: './bundle.js',
-},
-    module: {
-      rules: [{
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
-          },
-        },
-        },
-        {
-          test: /\.(ts|tsx)$/,
-          exclude: /node_modules/,
-          use: ['ts-loader']
-        },
-        {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
-        }
-      ]},
-    resolve: {
-      extensions: ['.js', '.jsx', '.scss', '.css', '.gif', '.ts', '.tsx'],
-    },
+  },
+  devtool:'eval-source-map',
+  mode: 'development',
   devServer: {
     historyApiFallback: true,
     static: {
@@ -45,19 +27,47 @@ module.exports = {
     compress: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
     proxy: {
-      '/**':{
+      '/api/**':{
         target: `http://localhost:3000`,
-        secure: false
+        secure: false,
+      },
+      '/assets/**': {
+        target: 'http://localhost:3000/',
+        secure: false,
       }
     },
   },
-
-
-  
+  module: {
+    rules: [{
+      test: /.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+        },
+      },
+      },
+      {
+        test: /.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: ['ts-loader']
+      },
+      {
+      test: /.(css|scss)$/,
+      use: ["style-loader", "css-loader", "sass-loader"]
+      }
+    ]},
+  resolve: {
+    extensions: ['.js', '.jsx', '.scss', '.css', '.gif', '.ts', '.tsx'],
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./client/index.html",
       favicon: path.resolve(__dirname, './client/assets/geodude.ico')
     })
-  ]
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  }
 };

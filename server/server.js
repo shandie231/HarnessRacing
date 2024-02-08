@@ -1,22 +1,33 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-const horseRouter = require('./routes/horseRoutes')
+
 
 const app = express();
 const PORT = 3000;
 
+
+//Routes
+const horseRouter = require('./routes/horseRoutes')
+
+
+// Handle parsing request body
 app.use(cors({origin: 'http://localhost:3000', credentials: true}));
 app.use(express.static(path.join(__dirname, '../build')));
 app.use(express.json());
 app.use(express.urlencoded({extended: true }));
 
+app.use('/assets', express.static(path.resolve(__dirname, '../client/index.html')));
+
+
+
+
 app.use('/horse', horseRouter);
 
 
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../build', 'index.html'));
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
 
 //global error handler

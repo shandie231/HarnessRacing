@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import axios from 'axios';
+import Navbar from './Navbar';
 
 
 
@@ -26,11 +27,14 @@ const Home = () => {
 
   return(
     <div>
-      HomePage
+      <Navbar />
       <div>
-        <button onClick={() => getHorses()}>Horses</button>
+        HomePage
+        <div>
+          <button onClick={() => getHorses()}>Horses</button>
+        </div>
+        {getHorse}
       </div>
-      {getHorse}
     </div>
   )
 

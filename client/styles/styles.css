@@ -1,0 +1,15 @@
+.navbar {  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: lightsteelblue;
+  height: 8vh;
+}
+
+.navButtons {
+  display: flex;
+  justify-content: space-around;
+  
+
+
+}
