@@ -39,7 +39,7 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /.(js|jsx)$/,
+      test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       use: {
         loader: 'babel-loader',
@@ -49,15 +49,22 @@ module.exports = {
       },
       },
       {
-        test: /.(ts|tsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: ['ts-loader']
       },
       {
-      test: /.(css|scss)$/,
-      use: ["style-loader", "css-loader", "sass-loader"]
-      }
+        test: /\.(css|scss)$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: {
+          loader: 'file-loader',
+        },
+      },
     ]},
+
   resolve: {
     extensions: ['.js', '.jsx', '.scss', '.css', '.gif', '.ts', '.tsx'],
   },

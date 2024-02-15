@@ -9,7 +9,13 @@
 .navButtons {
   display: flex;
   justify-content: space-around;
-  
+}
 
 
+.projectCardsText {
+
+}
+
+.projectBackground {
+  background-color: rgb(147, 193, 230);
 }
