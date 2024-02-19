@@ -27,21 +27,18 @@ const Projects = () => {
       }}>
 
         {/* Shadow for the card - this should be done another way  */}
-        <div className='projectBackground'style={{
-          marginTop: '2vh',
-          height: `${boxHeight+0.55}vh`,
-          width: `${boxWidth+0.55}vh`,
-          borderRadius: '2em',
-          display: 'flex',
-        }}>
+       
           {/* Everything inside the project card */}
           <div className='projectCards' style={{
+            marginTop: `${boxHeight/10}vh`,
             backgroundColor: 'rgb(232, 242, 246)',
             height: `${boxHeight}vh`,
             width: `${boxWidth}vh`,
             borderRadius: '2em',
             display: 'flex',
             position: 'relative',
+            boxShadow: '10px 10px 5px lightblue',
+
           }}>
             {/* Image for Project Card */}
             <div className='projectCardsImage'>
@@ -55,6 +52,7 @@ const Projects = () => {
                 margin: '10px',
                 justifyContent: 'space-around',
                 border: '2 px solid rgb(147, 193, 230)',
+                boxShadow: '10px 10px 5px lightblue',
                 }} />
             </div>
             {/* End Image for Project Card */}
@@ -62,15 +60,21 @@ const Projects = () => {
             {/* Data information. Project Title, Text description and buttons */}
             <div className='projectCardsData' style={{
               position: 'relative',
-              margin: '1vh'
+              margin: '2vh'
             }}>
-              <div className='projectCardsText'>
+              <div className='projectCardsText' style={{
+                width: `${boxWidth - (boxWidth/4)}`,
+                height: '100%',
+              }}>
                 <div className='title' style={{
                   fontWeight: 'bold',
+                  color: 'steelblue',
                 }}>
                   {title}
                 </div>
-                <div className='description'>
+                <div className='description' style={{
+                  color: 'steelblue',
+                }}>
                   {text}
                 </div>
               </div>
@@ -79,8 +83,10 @@ const Projects = () => {
                   right: '0',
                   bottom: '0',
                   margin: '10px',
+                  boxShadow: '5px 5px 5px lightblue',
                 }}>
-                  <button>More Info</button>
+                  <button className='infoButton' style={{
+                  }}>More Info</button>
               </div>
             </div>
             {/* End Data Information */}
@@ -89,7 +95,7 @@ const Projects = () => {
 
             </div>
         
-          </div>
+          
         </div>
       </div>
       

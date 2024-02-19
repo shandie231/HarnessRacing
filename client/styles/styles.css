@@ -19,3 +19,35 @@
 .projectBackground {
   background-color: rgb(147, 193, 230);
 }
+
+.infoButton {
+  background-color: steelblue;
+  color: rgb(232, 242, 246);
+  font-weight: bold;
+  border-color: steelblue;
+}
+
+.infoButton:hover {
+  background-color: rgb(232, 242, 246);
+  color: steelblue;
+  font-weight: bold;
+  border-color: steelblue;
+  transition: 0.2s;
+
+}
+
+button {
+  background-color: steelblue;
+  color: rgb(232, 242, 246);
+  font-weight: bold;
+  border-color: steelblue;
+}
+
+button:hover {
+  background-color: rgb(232, 242, 246);
+  color: steelblue;
+  font-weight: bold;
+  border-color: steelblue;
+  transition: 0.2s;
+
+}
