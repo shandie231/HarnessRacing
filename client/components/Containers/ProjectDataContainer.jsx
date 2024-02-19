@@ -28,11 +28,35 @@ const ProjectDataContainer = () => {
     boxWidth: boxWidth,
   }
 
+  const projects = [persData, persData];
+  const numProj = 1;
+  // for(let i = 0; i < numProj; i++){
+  //   projects.push(persData)
+  //   return projects;
+  // }
+
+  
+
   return(
-  <Projects 
-  persData = {persData
-  } />
+    <div>
+      <Navbar/>
+      <div>
+        {projects.map((element, index) => (
+          <Projects 
+            key={index}
+            persData={element.persData}
+            text={element.text}
+            title={element.title}
+            imageAddress={element.imageAddress}
+            boxHeight={element.boxHeight}
+            boxWidth={element.boxWidth}
+            />
+        ))}
+      </div>
+     
+    </div>
+
     )
 }
 
-export default Projects;
+export default ProjectDataContainer;

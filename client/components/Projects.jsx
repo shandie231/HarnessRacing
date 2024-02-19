@@ -8,9 +8,9 @@ import ProjectDataContainer from '../components/Containers/ProjectDataContainer'
 
 
 
-const Projects = ({persData}) => {
+const Projects = ({persData, text, title, imageAddress, boxHeight, boxWidth}) => {
   
-  const {text, title, imageAddress, boxHeight, boxWidth } = persData;
+  // const {text, title, imageAddress, boxHeight, boxWidth } = persData;
 
   // Title, Text, and image address for project cards. These will be gained from either props or API calls in the future
 
@@ -24,7 +24,6 @@ const Projects = ({persData}) => {
 
   return(
     <div>
-      <Navbar />
       <div className='displayProject' style={{
         display: 'flex',
         justifyContent: 'space-around',
