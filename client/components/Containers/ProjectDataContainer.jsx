@@ -4,6 +4,7 @@ import axios from 'axios';
 import Navbar from '../Navbar';
 import lambdaPeelerV2 from '../../assets/LambdaPeelerV2.jpeg';
 import Projects from '../../components/Projects';
+import Starfield from 'react-starfield';
 
 
 
@@ -42,6 +43,11 @@ const ProjectDataContainer = () => {
   return(
     <div>
       <Navbar/>
+      <Starfield
+        starCount={1000}
+        starColor={[255, 255, 255]}
+        speedFactor={0.02}
+      />
       <div>
         {/* {projects.map((element, index) => (
           <Projects 
