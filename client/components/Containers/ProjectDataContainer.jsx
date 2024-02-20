@@ -28,6 +28,13 @@ const ProjectDataContainer = () => {
     boxHeight: boxHeight,
     boxWidth: boxWidth,
   }
+  const persData1 = {
+    text: text,
+    title: title,
+    imageAddress: imageAddress,
+    boxHeight: boxHeight,
+    boxWidth: boxWidth,
+  }
 
   const projects = [];
   const numProj = 5;
