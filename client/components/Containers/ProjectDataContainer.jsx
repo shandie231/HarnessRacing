@@ -28,12 +28,14 @@ const ProjectDataContainer = () => {
     boxWidth: boxWidth,
   }
 
-  const projects = [persData, persData];
-  const numProj = 1;
-  // for(let i = 0; i < numProj; i++){
-  //   projects.push(persData)
-  //   return projects;
-  // }
+  const projects = [];
+  const numProj = 5;
+  for(let i = 0; i < numProj; i++){
+    projects.push(<Projects
+      key={i} 
+      persData={persData}
+     />)
+  }
 
   
 
@@ -41,7 +43,7 @@ const ProjectDataContainer = () => {
     <div>
       <Navbar/>
       <div>
-        {projects.map((element, index) => (
+        {/* {projects.map((element, index) => (
           <Projects 
             key={index}
             persData={element.persData}
@@ -51,7 +53,8 @@ const ProjectDataContainer = () => {
             boxHeight={element.boxHeight}
             boxWidth={element.boxWidth}
             />
-        ))}
+        ))} */}
+        {projects}
       </div>
      
     </div>

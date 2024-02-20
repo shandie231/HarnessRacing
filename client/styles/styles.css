@@ -51,3 +51,7 @@ button:hover {
   transition: 0.2s;
 
 }
+
+body {
+  background-color: rgb(11, 66, 110);
+}

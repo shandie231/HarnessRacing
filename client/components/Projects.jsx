@@ -8,9 +8,16 @@ import ProjectDataContainer from '../components/Containers/ProjectDataContainer'
 
 
 
-const Projects = ({persData, text, title, imageAddress, boxHeight, boxWidth}) => {
+const Projects = (props) => {
   
+  const { persData } = props;
+
   // const {text, title, imageAddress, boxHeight, boxWidth } = persData;
+  const text = persData.text;
+  const title = persData.title;
+  const imageAddress = persData.imageAddress;
+  const boxHeight = persData.boxHeight;
+  const boxWidth = persData.boxWidth;
 
   // Title, Text, and image address for project cards. These will be gained from either props or API calls in the future
 
