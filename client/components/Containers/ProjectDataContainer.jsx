@@ -54,6 +54,7 @@ const ProjectDataContainer = () => {
         starCount={2000}
         starColor={[255, 255, 255]}
         speedFactor={0.02}
+         
       />
       <div>
         {/* {projects.map((element, index) => (
@@ -65,6 +66,7 @@ const ProjectDataContainer = () => {
             imageAddress={element.imageAddress}
             boxHeight={element.boxHeight}
             boxWidth={element.boxWidth}
+            //
             />
         ))} */}
         {projects}
