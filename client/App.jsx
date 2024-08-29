@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ExperienceGPT from './components/ExperienceGPT';
+import Projects from './components/Containers/Projects';
+import Interests from './components/Containers/Interests';
 import HomePage from './components/HomePage';
 // Import your detailed pages here
 import SoftwareDeveloperDetails from '../client/components/Containers/RowanUniversity';
@@ -17,6 +19,8 @@ const App = () => (
       <Route path="/ExperienceGPT" element={<ExperienceGPT />} />
       <Route path="/software-developer-details" element={<SoftwareDeveloperDetails />} />
       <Route path="/geologist-details" element={<GeologistDetails />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/interests" element={<Interests />} />
       <Route path="/lambda-peeler-details" element={<LambdaPeelerDetails />} />
       {/* Add additional routes as needed */}
     </Routes>
