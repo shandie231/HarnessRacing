@@ -10,13 +10,13 @@ const experiences = [
     icon: <FaUniversity size={40} /> // Icon for Rowan University
   },
   {
-    title: 'Geologist in Offshore Windfarm Industry',
+    title: 'Field Project Manager in Offshore Windfarm Industry',
     description: 'Managed backdeck operations, operated cranes, trained new crew members, led geological lab work, and built an application for data input and deliverables.',
     link: '/geologist-details',
     icon: <FaWind size={40} /> // Icon for Windfarm Geologist
   },
   {
-    title: 'Creator of Lambda Peeler',
+    title: 'Co-Creator of Lambda Peeler',
     description: 'Developed an open-source application for managing AWS Lambda functions and layers, featuring a frontend with React and a backend with Node.js.',
     link: '/lambda-peeler-details',
     icon: <FaCode size={40} /> // Icon for Lambda Peeler
