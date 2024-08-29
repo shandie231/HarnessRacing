@@ -12,7 +12,10 @@ const RowanUniversity = () => {
   return (
     <div className="container">
       <header className="header">
-        <h1 className="title">Software Developer at Rowan University</h1>
+        <div className="company-info">
+          <h1 className="company-name">Rowan University</h1>
+          <p className="company-role">Software Developer</p>
+        </div>
         <button className="return-button" onClick={handleReturn}>Return to ExperienceGPT</button>
       </header>
       <section className="description">
@@ -56,6 +59,19 @@ const RowanUniversity = () => {
           justify-content: space-between;
           align-items: center;
           margin-bottom: 20px;
+        }
+        .company-info {
+          flex: 1;
+        }
+        .company-name {
+          font-size: 2rem;
+          margin: 0;
+          color: #333;
+        }
+        .company-role {
+          font-size: 1.2rem;
+          color: #555;
+          margin-top: 5px;
         }
         .title {
           font-size: 2rem;

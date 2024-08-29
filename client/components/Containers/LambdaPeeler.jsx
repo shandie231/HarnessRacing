@@ -8,7 +8,10 @@ const LambdaPeeler = () => {
   return (
     <div className="container">
       <header className="header">
-        <h1><FaCode size={40} /> Lambda Peeler</h1>
+        <div className="company-info">
+          <h1 className="company-name">Lambda Peeler</h1>
+          <p className="company-role">Software Engineer</p>
+        </div>
         <button className="return-button" onClick={() => navigate('/ExperienceGPT')}>Return to ExperienceGPT</button>
       </header>
       <section className="description">
@@ -53,6 +56,19 @@ const LambdaPeeler = () => {
           align-items: center;
           font-size: 2rem;
           margin: 0;
+        }
+        .company-info {
+          flex: 1;
+        }
+        .company-name {
+          font-size: 2rem;
+          margin: 0;
+          color: #333;
+        }
+        .company-role {
+          font-size: 1.2rem;
+          color: #555;
+          margin-top: 5px;
         }
         .return-button {
           background-color: #0070f3;

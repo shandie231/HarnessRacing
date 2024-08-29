@@ -13,7 +13,10 @@ const WindfarmGeologist = () => {
   return (
     <div className="container">
       <header className="header">
-        <h1 className="title">Windfarm Geologist</h1>
+        <div className="company-info">
+          <h1 className="company-name">Alpine Ocean Seismic Survey</h1>
+          <p className="company-role">Field Project Manager</p>
+        </div>
         <button className="return-button" onClick={handleReturn}>Return to ExperienceGPT</button>
       </header>
       <section className="description">
@@ -54,9 +57,18 @@ const WindfarmGeologist = () => {
           align-items: center;
           margin-bottom: 20px;
         }
-        .title {
+        .company-info {
+          flex: 1;
+        }
+        .company-name {
           font-size: 2rem;
           margin: 0;
+          color: #333;
+        }
+        .company-role {
+          font-size: 1.2rem;
+          color: #555;
+          margin-top: 5px;
         }
         .return-button {
           background-color: #0070f3;

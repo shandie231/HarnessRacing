@@ -32,7 +32,7 @@ const ExperienceGPT = () => {
 
   return (
     <div className="experience-container">
-      <h1 className="experience-title">ExperienceGPT</h1>
+      <h1 className="experience-title">Professional Experience</h1>
       <div className="experience-list">
         {experiences.map((experience, index) => (
           <div key={index} className="experience-item">
