@@ -33,9 +33,10 @@ const HomePage = () => {
       <header className="header">
         <div className="profile">
           <img src={profileImg} alt="Michael Shand" className="profile-photo" />
-          <h1 className="name">Michael Shand</h1>
+          <h1 className="name">Hello, I'm Michael Shand</h1>
         </div>
-        <h2 className="title">Innovative Software Engineer</h2>
+        <br></br>
+        <h2 className="title">Software Engineer</h2>
       </header>
       <section className="brief-experience section">
         <h2 className="section-title">Professional Experience</h2>
