@@ -1,14 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaUniversity, FaCode, FaWind } from 'react-icons/fa';
+import { FaHome, FaUniversity, FaCode, FaWind, FaUserTie } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-list">
-        <li className="navbar-item">
+      <li className="navbar-item">
           <Link to="/" className="navbar-link">
-            <FaHome size={24} /> ExperienceGPT
+            <FaHome size={24} /> Home
+          </Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/ExperienceGPT" className="navbar-link">
+            <FaUserTie size={24} /> ExperienceGPT
           </Link>
         </li>
         <li className="navbar-item">

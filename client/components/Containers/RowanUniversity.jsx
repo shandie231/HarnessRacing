@@ -6,7 +6,7 @@ const RowanUniversity = () => {
   const navigate = useNavigate();
 
   const handleReturn = () => {
-    navigate('/');
+    navigate('/ExperienceGPT');
   };
 
   return (

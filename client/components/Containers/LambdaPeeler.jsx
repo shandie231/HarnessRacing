@@ -9,7 +9,7 @@ const LambdaPeeler = () => {
     <div className="container">
       <header className="header">
         <h1><FaCode size={40} /> Lambda Peeler</h1>
-        <button className="return-button" onClick={() => navigate('/')}>Return to ExperienceGPT</button>
+        <button className="return-button" onClick={() => navigate('/ExperienceGPT')}>Return to ExperienceGPT</button>
       </header>
       <section className="description">
         <div className="text">

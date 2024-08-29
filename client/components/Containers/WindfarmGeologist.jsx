@@ -7,7 +7,7 @@ const WindfarmGeologist = () => {
   const navigate = useNavigate();
 
   const handleReturn = () => {
-    navigate('/');
+    navigate('/ExperienceGPT');
   };
 
   return (
