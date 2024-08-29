@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './Navbar';
 import lambdaPeelerV2 from '../assets/LambdaPeelerV2.jpeg';
+import alpineLogo from '../assets/AlpineLogo.png';
 import ProjectDataContainer from '../components/Containers/ProjectDataContainer';
 
 
@@ -51,16 +52,21 @@ const Projects = (props) => {
 
           }}>
             {/* Image for Project Card */}
-            <div className='projectCardsImage'>
+            <div className='projectCardsImage'  
+              style={{
+                display: 'flex',
+                justifyContent: 'center',  // Centers horizontally
+                alignItems: 'center',       // Centers vertically
+              }}>
 
               <img 
-              src={lambdaPeelerV2}
+              src={imageAddress}
               style={{
                 width: `${boxWidth/4}vh`,
                 borderRadius: '15px',
-                display: 'flex',
+      
                 margin: '10px',
-                justifyContent: 'space-around',
+          
                 border: '2 px solid rgb(147, 193, 230)',
                 boxShadow: '10px 10px 5px lightblue',
                 }} />
