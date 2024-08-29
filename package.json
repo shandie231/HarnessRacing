@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js",
+    "build": "webpack --config webpack.prod.js",
+    "heroku-postvuild": "npm run build",
     "start": "nodemon ./server/server.js",
     "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --open --hot --progress --color\" \"nodemon ./server/server.js\"",
     "all": "nodemon ./server/server.js & webpack-dev-server --open --hot"
@@ -21,6 +22,7 @@
     "bcrypt": "^5.1.1",
     "browserify-zlib": "^0.2.0",
     "buffer": "^6.0.3",
+    "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^8.2.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
@@ -44,8 +46,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
-    "@babel/preset-env": "^7.22.20",
-    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.23.0",
     "@types/react": "^18.2.26",
     "@types/react-dom": "^18.2.11",
