@@ -33,7 +33,8 @@ const HomePage = () => {
       <header className="header">
         <div className="profile">
           <img src={profileImg} alt="Michael Shand" className="profile-photo" />
-          <h1 className="name">Hello, I'm Michael Shand</h1>
+          {/* I hate this below. It needs to change */}
+          <h1 className="name">Hello, I'm Michael Shand</h1> 
         </div>
         <br></br>
         <h2 className="title">Software Engineer</h2>
@@ -43,7 +44,7 @@ const HomePage = () => {
         <p className="experience-summary">Driven software engineer with a passion for developing cutting-edge solutions. Leveraging a diverse background to bring creativity and technical expertise to every project.</p>
         <button className="button" onClick={goToExperience}>Explore My Journey</button>
       </section>
-      <section className="projects section">
+      {/* <section className="projects section">
         <h2 className="section-title">Projects</h2>
         <p className="projects-summary">Showcasing a portfolio of dynamic projects that blend innovation with functionality. Discover how my solutions can drive success and elevate your business.</p>
         <button className="button" onClick={goToProjects}>See My Work</button>
@@ -52,7 +53,7 @@ const HomePage = () => {
         <h2 className="section-title">Interests</h2>
         <p className="interests-summary">Explore my passions and interests that fuel my creativity and drive. From technology trends to personal hobbies, find out what inspires me.</p>
         <button className="button" onClick={goToInterests}>Discover More</button>
-      </section>
+      </section> */}
       <style jsx>{`
         .home-container {
           text-align: center;
