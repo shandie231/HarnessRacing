@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import profileImg from '../assets/MichaelSelfie.jpg';
+import profileImg from '../assets/ProcSmall.png';
 import { gsap } from 'gsap';
 
 const HomePage = () => {
@@ -38,6 +38,9 @@ const HomePage = () => {
         </div>
         <br></br>
         <h2 className="title">Software Engineer</h2>
+        <h2 className="title">&</h2>
+        <h2 className="title">Project Manager</h2>
+
       </header>
       <section className="brief-experience section">
         <h2 className="section-title">Professional Experience</h2>
@@ -83,9 +86,7 @@ const HomePage = () => {
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
           transition: transform 0.3s ease;
         }
-        .profile-photo:hover {
-          transform: scale(1.1);
-        }
+
         .name {
           font-size: 2.5rem;
           color: #333;
